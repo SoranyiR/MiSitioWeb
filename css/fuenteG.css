@@ -5,7 +5,11 @@ body{
     height: 100vh;
 }
 h1 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 9em;
+    font-family: 'Game of Thrones';
+    font-size: 5em;
     color: aliceblue;
+}
+@font-face {
+    font-family: Game of Thrones;
+    src: url(../font/game-of-thrones/Game\ of\ Thrones.ttf);
 }
