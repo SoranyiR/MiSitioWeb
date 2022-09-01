@@ -4,6 +4,8 @@
     height: 300px;
     background-color: white;
     font-size: 1.8em;
+    margin: 15px;
+    text-align: center;
 }
 .box-1 {
     background-color: darkcyan;
@@ -27,4 +29,14 @@
 }
 .box-7 {
     background-color: rgb(80,105,207);
+}
+.box-8 {
+    background-color: #FA8072;
+}
+.box-9 {
+    background-color: #FFFF00;
+}
+
+.box-10 {
+    background-color: #008000;
 }
