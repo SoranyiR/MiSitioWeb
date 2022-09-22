@@ -7,30 +7,24 @@
 .img-100{
     width: 100%;
     border: solid cyan 5px;
+    float: right;
    }
-   .img-90{
-      width: 100%;
-   }
+
  h1, h2 {
     text-align: center;
+    padding: 8px;
  }
 
  .little {
+
    text-align: center;
-   margin: 2%;
+   margin: 30px;
    margin-right: 57px;
  }
  .programacion {
    display: inline-flex;
- }
- 
 
- .lemons {
-   display: inline-block;
-   width: 30%;
-   margin: 30px 1.5%;
-   vertical-align: top;
- } 
+ }
  p{
    text-align:justify;
  }
