@@ -15,7 +15,7 @@
 
  .box-1 {
     box-shadow: 21px 19px 10px rgb(92,0,0);
-    margin-left: 80vh;
+    margin-left: 75vh;
     background-color:brown;
 
  }
@@ -31,7 +31,7 @@
 }
 
 .aling {
-    margin-left: 50vh;
+    margin-left: 60vh;
     margin-right: 3000px;
     display: inline-flex;
 }
@@ -51,6 +51,6 @@
 }
 
 .ali {
-    margin-left: 20vh;
+    margin-left: 40vh;
     display: inline-flex;
 }
