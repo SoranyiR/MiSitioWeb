@@ -25,3 +25,28 @@ tbody {
 img {
     width: 115px;
 }
+
+    .lite {
+        color:white;
+        background-color:rgb(0, 175, 169) ;
+    }
+    .top-lite {
+        background-color: rgb(25, 133, 52);
+        color: white;
+    }
+    .row-lite {
+        background-color:rgb(9, 112, 230);
+        color: white;
+    }
+    .righ-lite {
+        background-color:darkorange;
+        color: white;
+    }
+    .col-lite {
+        background-color:blueviolet;
+        color: white;
+    }
+    .lo {
+        text-align: center;
+    }
+    
