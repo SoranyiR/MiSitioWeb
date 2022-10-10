@@ -20,7 +20,7 @@ thead {
     background-color:cadetblue;
 }
 tbody {
-    background-color:ivory;
+    background-color:rgb(230, 234, 235);
 }
 img {
     width: 115px;
@@ -43,10 +43,23 @@ img {
         color: white;
     }
     .col-lite {
-        background-color:blueviolet;
+        background-color:rgb(75, 13, 133);
         color: white;
     }
     .lo {
         text-align: center;
     }
-    
+    .r {
+        color: red;
+        text-align: center;
+    }
+    .v {
+        color: green;
+        text-align: center;
+    }
+    .N {
+        text-align: center;
+    }
+    .S {
+        text-align: center;
+    }
