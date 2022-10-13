@@ -10,24 +10,36 @@
 <body>
     <h1>Citas Medicas</h1>
     <form>
-        <label>Ingrese el tipo de documento</label>
-        <select>
-            <option value="">Registro Civil</option>
-            <option value="">Tarjeta de Identidad</option>
-            <option value="">Cedulla de Ciudadania</option>
-            <option value="">Cedula de Extranjeria</option>
-        </select><br>
-       <label>Ingrese su numero de documento</label>
-        <input type="text">
-        <label>Ingrese su(s) nombre(s)</label>
-        <input type="text">
-        <label>ingrese su(s) apellido(s)</label>
-        <input type="text">
-        <label>Ingrese su genero</label>
-        <input type="radio" name="Genero" id="">Masculino  <br>
-        <input type="radio" name="Genero" id="">Femenino   <br>
-        <input type="radio" name="Genero" id="">Indeterminado  <br>
-        
+        <fieldset>
+            <legend>Ingrese la informacion</legend>
+            <label>Ingrese el tipo de documento</label>
+            <select>
+                <option value="">Registro Civil</option>
+                <option value="">Tarjeta de Identidad</option>
+                <option value="">Cedulla de Ciudadania</option>
+                <option value="">Cedula de Extranjeria</option>
+            </select><br>
+              <label>Ingrese su numero de documento</label>
+           <input type="text" placeholder="ingrese el numero de documento">
+            <label>Ingrese su(s) nombre(s)</label>
+            <input type="text" placeholder="Ingrese su(s) nombre(s)">
+            <label>ingrese su(s) apellido(s)</label>
+            <input type="text" placeholder="ingrese su(s) apellido(s)">
+            <label>Ingrese su genero</label>
+            <input type="radio" name="Genero" id="">Masculino  <br>
+            <input type="radio" name="Genero" id="">Femenino   <br>
+            <input type="radio" name="Genero" id="">Indeterminado  <br>
+            <label>seleccione el día de la cita</label>
+            <input type="checkbox" name="diaCita" id=""> Lunes<br>
+            <input type="checkbox" name="diaCita" id=""> Martes<br>
+            <input type="checkbox" name="diaCita" id=""> Miercoles<br>
+            <input type="checkbox" name="diaCita" id=""> Jueves<br>
+            <input type="checkbox" name="diaCita" id=""> Viernes<br>
+            <label>Dudas e Inquietudes</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea><br>
+            <input type="submit" value="Enviar"> <br>
+            <button>Confirmar</button>
+        </fieldset>
     </form>
 </body>
 </html>
