@@ -1,6 +1,6 @@
 .fa-solid{
     color:rgb(135, 150, 161);
-    font-size: 1.2em;
+    
     padding-right: 5px;
    
 }
@@ -8,23 +8,23 @@
 
 .fa-brands{
     color:rgb(135, 150, 161);
-    font-size: 1.2em;
     padding-right: 5px;
 
 }
 li{
     font-size: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 25px;
     color: rgb(49, 48, 48);
+
 }
 nav{
     background-color:white;
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 280px;
     height: 100vh;
-    border: 4PX solid white;
+    border-right: 1PX solid rgb(135, 150, 161);
     
 }
 ul{
@@ -34,7 +34,7 @@ a{
     text-decoration: none;
 }
 li:hover{
-    background-color:rgb(194, 178, 178);
+    background-color:rgb(230, 235, 239);
 }
 
 br{
@@ -47,4 +47,7 @@ div{
 }
 .fa-circle-user{
     padding-top: 25px;
+}
+i{
+margin-right: 10px;
 }
