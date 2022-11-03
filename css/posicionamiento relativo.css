@@ -1,6 +1,49 @@
 .box-1 {
     width: 500px;
-    height: 500px;
+    height: 100px;
     border: 2px solid rgb(64, 64, 64);
 
 }
+.desp-2 {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(64, 64, 235);
+    position: relative;
+    top: 100%;
+    left: 30px;
+   
+}
+.sub-1 {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(46, 44, 44);
+    position: relative;
+    top: 0%;
+    left: 150px;
+}
+
+.sub-2 {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(90, 87, 86);
+    position: relative;
+    top: 0%;
+    left: 150px;}
+
+.desp-3 {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    top: 100%;
+    left: 30px;
+}
+.desp-4 {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(197, 59, 59);
+    position: relative;
+    top: 100%;
+    left: 30px;
+}
+
