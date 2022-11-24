@@ -1,0 +1,40 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+.box-main {
+    background-image: url("../img/atardecer.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* .box-2 {
+    background-image: url("../img/gato.699x701.jpg");
+    width: 750px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+ul {
+    width: 100%;
+    text-align: right;
+    height: 80px;
+   
+
+}
+
+li {
+    padding: 25px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.4em;
+    display: inline-block;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.last-item {
+    margin-right: 60px;
+}
