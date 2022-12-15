@@ -1,14 +1,16 @@
-let barMenu = document.getElementById("barMenu");
-let main_Menu = document.getElementById("mainMenu"); 
+let box3 = document.getElementById("box3");
 
-barMenu.addEventListener("click", function() {
-    if (main_Menu.classList.contains("main-menu")){
-        main_Menu.classList.add("main-menu-visible");
-        main_Menu.classList.remove("main-menu");
+
+box3.addEventListener("click", function() {
+    if(box3.classList.contains("box3-old")){
+        box3.classList.add("box3-new");
+        box3.classList.remove("box3-old");
     }
-        else{
-            main_Menu.classList.remove("main-menu-visible");
-            main_Menu.classList.add("main-menu");
-        }
+    else{
+        box3.classList.remove("box3-new");
+        box3.classList.add("box3-old");
+    }
         
-    });
+    }
+
+)
