@@ -165,3 +165,7 @@ h3 {
     display: flex;
     font-size: 1em;
 }
+
+.texto-grafica {
+    flex-direction: column;
+}
