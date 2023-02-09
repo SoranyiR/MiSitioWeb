@@ -3,6 +3,7 @@ h1 {
     font-size: 1.5em;
     font-family: 'Courier New', Courier, monospace;
 }
+
 h2 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
@@ -20,7 +21,8 @@ h2 {
 img {
     border-radius: 100%;
 }
-.box-direction{
+
+.box-direction {
     display: flex;
     background-color: dimgray;
     flex-direction: row;
@@ -42,23 +44,24 @@ img {
 
 .box-Wrap-continuo {
     display: flex;
-    flex-flow:column wrap;
+    flex-flow: column wrap;
     height: 415px;
     overflow-x: scroll;
     overflow-y: hidden;
     padding-bottom: 40px;
 }
 
-.box-space-between{
+.box-space-between {
     display: flex;
     background-color: dimgray;
     justify-content: space-between;
 
 }
+
 .box-space-around {
     display: flex;
     background-color: dimgray;
-    justify-content: space-around ;
+    justify-content: space-around;
 }
 
 .box-space-evenly {
@@ -83,6 +86,7 @@ img {
     flex-flow: row-reverse;
 
 }
+
 .box-flex-center {
     height: 420px;
     display: flex;
@@ -94,8 +98,9 @@ img {
     height: 500px;
     display: flex;
     background-color: dimgray;
-    align-items:self-start;
+    align-items: self-start;
 }
+
 .box-44 {
     height: 480px;
 }
@@ -103,49 +108,59 @@ img {
 .box-45 {
     height: 210px;
 }
+
 .box-aling-end {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     width: 750px;
     gap: 5px;
-    border-bottom: 2px solid rgb(64, 64, 64,.8);
-    box-shadow: 0 2px 5px solid rgb(64, 64, 64,.6);
+    border-bottom: 2px solid rgb(64, 64, 64, .8);
+    box-shadow: 0 2px 5px solid rgb(64, 64, 64, .6);
 }
 
 .box-box-aling {
     width: 130px;
-    background-color:rgb(84, 67, 110);
+    background-color: rgb(84, 67, 110);
     margin-bottom: 0;
 
 
 }
 
 .box-47 {
-    
-    height:350px ;
+
+    height: 350px;
 }
 
 .box-48 {
-    
+
     height: 210px;
 }
+
 .box-49 {
-   
-   height: 100px ;
+
+    height: 400px;
 }
+
 .box-50 {
     height: 280px;
 
 }
+
 .box-51 {
     height: 390px;
 }
-.box-main-align {
+
+.box-main-aling {
     display: flex;
     justify-content: center;
 }
-h2 {
+.box-box-aling{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3 {
     justify-content: center;
     display: flex;
     font-size: 1em;
