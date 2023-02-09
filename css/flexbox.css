@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: cornflowerblue;
+    margin: 10px;
+    color: white;
+    font-size: 3em;
+}
+.box-direction{
+    display: flex;
+    background-color: dimgray;
+    flex-direction: row;
+}
+
+.box-wrap {
+    display: flex;
+    background-color: dimgray;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box-NoWrap {
+    display: flex;
+    background-color: dimgray;
+    flex-flow: row nowrap;
+
+}
+
+.box-Wrap-continuo {
+    display: flex;
+    flex-flow:column wrap;
+    background-color: dimgray;
+    height: 420px;
+    overflow-x: scroll;
+}
