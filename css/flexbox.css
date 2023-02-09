@@ -12,9 +12,13 @@ h2 {
     width: 400px;
     height: 400px;
     background-color: cornflowerblue;
-    margin: 10px;
+    margin: 10px 10px;
     color: white;
     font-size: 3em;
+}
+
+img {
+    border-radius: 100%;
 }
 .box-direction{
     display: flex;
@@ -39,7 +43,49 @@ h2 {
 .box-Wrap-continuo {
     display: flex;
     flex-flow:column wrap;
-    background-color: dimgray;
-    height: 420px;
+    height: 415px;
     overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 40px;
+}
+
+.box-space-between{
+    display: flex;
+    background-color: dimgray;
+    justify-content: space-between;
+
+}
+.box-space-around {
+    display: flex;
+    background-color: dimgray;
+    justify-content: space-around ;
+}
+
+.box-space-evenly {
+    height: 420px;
+    display: flex;
+    background-color: dimgray;
+    justify-content: space-evenly;
+}
+
+.box-flex-start {
+    height: 420px;
+    display: flex;
+    background-color: dimgray;
+    justify-content: flex-start;
+}
+
+.box-flex-end {
+    height: 420px;
+    display: flex;
+    background-color: dimgray;
+    justify-content: flex-end;
+    flex-flow: row-reverse;
+
+}
+.box-flex-center {
+    height: 420px;
+    display: flex;
+    background-color: dimgray;
+    justify-content: center;
 }
