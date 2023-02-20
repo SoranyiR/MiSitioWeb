@@ -40,3 +40,8 @@ h2{
 .dia1Mes {
     grid-column-start: 2;
 }
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
