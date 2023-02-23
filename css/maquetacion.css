@@ -1,0 +1,56 @@
+.main-box {
+    grid-gap: 10px;
+    display: grid;
+    grid-template: "logo        busqueda  btn-empresa   btn-iniciar-sesion  menu-hamburguer" 60px 
+                    "main-img   main-img  main-img      main-img            main-img"        600px/    
+                    100px       1fr       300px         300px                  70px;
+}
+.logo {
+    grid-area: logo ;
+    background-color: rgb(152, 202, 63);
+
+}
+
+.busqueda {
+    grid-area: busqueda;
+    background-color: gainsboro;
+}
+.btn-empresa {
+    grid-area: btn-empresa;
+    background-color: rgb(18, 31, 61);
+}
+.btn-iniciar-sesion {
+    grid-area: btn-iniciar-sesion;
+    background-color: goldenrod ;
+}
+
+.menu-hamburguer {
+    grid-area: menu-hamburguer;
+    background-color: darkcyan  ;
+}
+
+.main-img {
+    grid-area: main-img;
+    background-color: dodgerblue;
+}
+.texto-grid {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.texto-grid-2{
+    color: black;
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+.partners{
+ 
+
+}
+
+.titulo-partners {
+     
+}
