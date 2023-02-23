@@ -3,7 +3,9 @@
     display: grid;
     grid-template: "header         empty         empty "           60px 
                    "img-principal  img-principal img-principal"    600px
-                   "img-article1   img-article2  img-article3"     150px/    
+                   "img-article1   img-article2  img-article3"     150px
+                   "texto-1        texto-2       texto-3     "     200px/
+
                     350px          350px         350px      ;
 }
 .contenido {
@@ -34,5 +36,17 @@
 .img-article3 {
     grid-area: img-article3 ;
     background-color: rgb(64, 64, 64);
+}
+.texto-1 {
+    grid-area: texto-1 ;
+}
+.texto-2 {
+    grid-area: texto-2 ;
+}
+.texto-3 {
+    grid-area: texto-3 ;
+}
 
+h4{
+    text-align: justify;
 }
