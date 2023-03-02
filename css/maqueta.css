@@ -2,17 +2,19 @@
     .main-box {
         grid-gap: 10px;
         display: grid;
-        grid-template: 
-        "h2 h2 h2" 60px
-        "header         empty         empty " 60px "img-principal  img-principal img-principal" 600px
+        grid-template:
+            "h2 h2 h2" 60px
+            "header         empty         empty " 60px "img-principal  img-principal img-principal" 600px
             "img-article1   img-article2  img-article3" 150px
             "texto-1        texto-2       texto-3     " 400px/
             350px 350px 350px;
     }
-h2{
-    text-align: center;
-    grid-area: h2;
-}
+
+    h2 {
+        text-align: center;
+        grid-area: h2;
+    }
+
     .contenido-pc {
         display: flex;
         justify-content: center;
@@ -92,7 +94,7 @@ h2{
         display: flex;
         justify-content: center;
         text-align: center;
-  
+
     }
 
     .contenido-pc,
@@ -104,17 +106,20 @@ h2{
 
         grid-gap: 10px;
         display: grid;
-        grid-template: 
-        "h2 h2"                           60px            
-        "header-tablet              empty                " 60px "img-principal-tablet       img-principal-tablet " 400px
-            "img-article1-tablet        img-article2-tablet  " 200px
-            "texto-1-tablet            texto-2-tablet           " 400px/
-            350px 350px;
+        grid-template: "h2      h2 " 60px
+            "header-tablet    header-tablet" 60px
+            "img-principal-tablet img-principal-tablet" 400px
+            "img-article1-tablet   img-article2-tablet" 400px
+            "texto-1-tablet   texto-2-tablet" 260px
+            "img-article3-tablet empty" 400px
+            "texto-3-tablet empty" 260px/
+            350px 350px
     }
 
     .header-tablet,
     .img-article1-tablet,
     .img-article2-tablet,
+    .img-article3-tablet,
     .img-principal-tablet {
         border: solid 2px black;
         border-radius: 6px;
@@ -129,6 +134,7 @@ h2{
         grid-area: h2;
         text-align: center;
     }
+
     .header-tablet {
         grid-area: header-tablet;
         background-color: rgb(222, 8, 1);
@@ -166,6 +172,10 @@ h2{
         grid-area: texto-2-tablet;
     }
 
+    .texto-3-tablet {
+        grid-area: texto-3-tablet;
+    }
+
     h4 {
         text-align: justify;
     }
@@ -174,9 +184,10 @@ h2{
 
 /* Smartphone */
 @media screen and (max-width:767px) {
-    h2{
+    h2 {
         grid-area: h2;
     }
+
     .contenido-smartphone {
         display: flex;
         justify-content: center;
@@ -193,18 +204,24 @@ h2{
 
         grid-gap: 10px;
         display: grid;
-        grid-template: 
-                        "h2 "                            80px  
-                        "header-smartphone"              60px 
-                        "img-principal-smartphone"       250px
-                        "img-article1-smartphone"        250px
-                        "texto-1-smartphone"             200px/
-                        350px;
+        grid-template:
+                          "h2 " 80px 
+                          "header-smartphone" 60px 
+                          "img-principal-smartphone" 250px
+                          "img-article1-smartphone" 250px
+                          "texto-1-smartphone" 220px
+                          "img-article2-smartphone" 250px
+                          "texto-2-smartphone" 220px
+                          "img-article3-smartphone" 250px
+                          "texto-3-smartphone" 220px/
+            350px;
     }
 
     .header-smartphone,
     .img-article1-smartphone,
-    .img-principal-smartphone {
+    .img-principal-smartphone,
+    .img-article2-smartphone,
+    .img-article3-smartphone {
         border: solid 2px black;
         border-radius: 6px;
         color: white;
@@ -245,6 +262,12 @@ h2{
 
     .texto-1-smartphone {
         grid-area: texto-1-smartphone;
+    }
+    .texto-2-smartphone {
+        grid-area: texto-2-smartphone;
+    }
+    .texto-3-smartphone {
+        grid-area: texto-3-smartphone;
     }
 
     h4 {
