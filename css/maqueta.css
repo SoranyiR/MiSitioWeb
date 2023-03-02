@@ -1,4 +1,4 @@
-@media screen and (min-width:820px) {
+@media screen and (min-width:1120px) {
     .main-box {
         grid-gap: 10px;
         display: grid;
@@ -87,7 +87,7 @@ h2{
 }
 
 /* Tablet */
-@media screen and (max-width:830px) and (min-width:420px) {
+@media screen and (max-width:1120px) and (min-width:770px) {
     .contenido-tablet {
         display: flex;
         justify-content: center;
@@ -173,7 +173,7 @@ h2{
 
 
 /* Smartphone */
-@media screen and (max-width:420px) {
+@media screen and (max-width:770px) {
     h2{
         grid-area: h2;
     }
