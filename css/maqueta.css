@@ -1,62 +1,257 @@
-.main-box {
-    
-    grid-gap: 10px;
-    display: grid;
-    grid-template: "header         empty         empty "           60px 
-                   "img-principal  img-principal img-principal"    600px
-                   "img-article1   img-article2  img-article3"     150px
-                   "texto-1        texto-2       texto-3     "     200px/
-
-                    350px          350px         350px      ;
-}
-.contenido {
-    display: flex;
-    justify-content: center;
+@media screen and (min-width:820px) {
+    .main-box {
+        grid-gap: 10px;
+        display: grid;
+        grid-template: 
+        "h2 h2 h2" 60px
+        "header         empty         empty " 60px "img-principal  img-principal img-principal" 600px
+            "img-article1   img-article2  img-article3" 150px
+            "texto-1        texto-2       texto-3     " 400px/
+            350px 350px 350px;
+    }
+h2{
     text-align: center;
+    grid-area: h2;
 }
-.header,.img-article1,.img-article2,.img-article3,.img-principal{
-    border: solid 2px black;
-    border-radius: 6px;
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header {
-    grid-area: header ;
-    background-color: rgb(222, 8, 1);
+    .contenido-pc {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 90px;
 
-}
-.img-principal{
-    grid-area: img-principal;
-    background-color: rgb(0, 139, 139);
+    }
 
-}
-.img-article1 {
-    grid-area: img-article1 ;
-    background-color: rgb(64, 64, 64);
+    .contenido-smartphone,
+    .contenido-tablet {
+        display: none;
+    }
 
-}
-.img-article2 {
-    grid-area: img-article2 ;
-    background-color: rgb(64, 64, 64);
+    .header,
+    .img-article1,
+    .img-article2,
+    .img-article3,
+    .img-principal {
+        border: solid 2px black;
+        border-radius: 6px;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-}
-.img-article3 {
-    grid-area: img-article3 ;
-    background-color: rgb(64, 64, 64);
-}
-.texto-1 {
-    grid-area: texto-1 ;
-}
-.texto-2 {
-    grid-area: texto-2 ;
-}
-.texto-3 {
-    grid-area: texto-3 ;
+    .header {
+        grid-area: header;
+        background-color: rgb(222, 8, 1);
+
+    }
+
+    .img-principal {
+        grid-area: img-principal;
+        background-color: rgb(0, 139, 139);
+
+    }
+
+    .img-article1 {
+        grid-area: img-article1;
+        background-color: rgb(64, 64, 64);
+
+    }
+
+    .img-article2 {
+        grid-area: img-article2;
+        background-color: rgb(64, 64, 64);
+
+    }
+
+    .img-article3 {
+        grid-area: img-article3;
+        background-color: rgb(64, 64, 64);
+    }
+
+    .texto-1 {
+        grid-area: texto-1;
+    }
+
+    .texto-2 {
+        grid-area: texto-2;
+    }
+
+    .texto-3 {
+        grid-area: texto-3;
+    }
+
+    h4 {
+        text-align: justify;
+    }
 }
 
-h4{
-    text-align: justify;
+/* Tablet */
+@media screen and (max-width:830px) and (min-width:420px) {
+    .contenido-tablet {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+  
+    }
+
+    .contenido-pc,
+    .contenido-smartphone {
+        display: none;
+    }
+
+    .main-box-tablet {
+
+        grid-gap: 10px;
+        display: grid;
+        grid-template: 
+        "h2 h2"                           60px            
+        "header-tablet              empty                " 60px "img-principal-tablet       img-principal-tablet " 400px
+            "img-article1-tablet        img-article2-tablet  " 200px
+            "texto-1-tablet            texto-2-tablet           " 400px/
+            350px 350px;
+    }
+
+    .header-tablet,
+    .img-article1-tablet,
+    .img-article2-tablet,
+    .img-principal-tablet {
+        border: solid 2px black;
+        border-radius: 6px;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        grid-area: h2;
+        text-align: center;
+    }
+    .header-tablet {
+        grid-area: header-tablet;
+        background-color: rgb(222, 8, 1);
+
+    }
+
+    .img-principal-tablet {
+        grid-area: img-principal-tablet;
+        background-color: rgb(0, 139, 139);
+
+    }
+
+    .img-article1-tablet {
+        grid-area: img-article1-tablet;
+        background-color: rgb(64, 64, 64);
+
+    }
+
+    .img-article2-tablet {
+        grid-area: img-article2-tablet;
+        background-color: rgb(64, 64, 64);
+
+    }
+
+    .img-article3-tablet {
+        grid-area: img-article3-tablet;
+        background-color: rgb(64, 64, 64);
+    }
+
+    .texto-1-tablet {
+        grid-area: texto-1-tablet;
+    }
+
+    .texto-2-tablet {
+        grid-area: texto-2-tablet;
+    }
+
+    h4 {
+        text-align: justify;
+    }
+}
+
+
+/* Smartphone */
+@media screen and (max-width:420px) {
+    h2{
+        grid-area: h2;
+    }
+    .contenido-smartphone {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 90px;
+    }
+
+    .contenido-pc,
+    .contenido-tablet {
+        display: none;
+    }
+
+    .main-box-smartphone {
+
+        grid-gap: 10px;
+        display: grid;
+        grid-template: 
+                        "h2 "                            80px  
+                        "header-smartphone"              60px 
+                        "img-principal-smartphone"       250px
+                        "img-article1-smartphone"        250px
+                        "texto-1-smartphone"             200px/
+                        350px;
+    }
+
+    .header-smartphone,
+    .img-article1-smartphone,
+    .img-principal-smartphone {
+        border: solid 2px black;
+        border-radius: 6px;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-smartphone {
+        grid-area: header-smartphone;
+        background-color: rgb(222, 8, 1);
+
+    }
+
+    .img-principal-smartphone {
+        grid-area: img-principal-smartphone;
+        background-color: rgb(0, 139, 139);
+
+    }
+
+    .img-article1-smartphone {
+        grid-area: img-article1-smartphone;
+        background-color: rgb(64, 64, 64);
+
+    }
+
+    .img-article2-smartphone {
+        grid-area: img-article2-smartphone;
+        background-color: rgb(64, 64, 64);
+
+    }
+
+    .img-article3-smartphone {
+        grid-area: img-article3-smartphone;
+        background-color: rgb(64, 64, 64);
+    }
+
+    .texto-1-smartphone {
+        grid-area: texto-1-smartphone;
+    }
+
+    h4 {
+        text-align: justify;
+    }
+
+    h2 {
+        text-align: center;
+    }
 }
