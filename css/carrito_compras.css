@@ -7,7 +7,7 @@ h1 {
     margin:  0 70px;
     display: grid;
     grid-template: "img-box-main empty "  /
-                    500px          1fr  ;
+                    435px          1fr;
 }
 img {
     border-radius: 10px;
@@ -15,13 +15,11 @@ img {
 
 .img-box-main {
     display: grid;
-    grid-area: img-box-main;
-    background-color: red;
-    height: 100%;
+    width: 100%;
     grid-template: "img-box     img-box  img-box    img-box  img-box    img-box  img-box " 435px
                    "empty-0     empty-0  empty-0    empty-0  empty-0    empty-0  empty-0 " 30px
                    "img-mini-1  empty-1  img-mini-2 empty-2  img-mini-3 empty-3  img-mini-4" 130px /
-                   90px        25px     90px       25px     90px       25px     90px          
+                    90px        25px     90px       25px     90px       25px     90px          
 }
 
 .img-box {
