@@ -88,11 +88,11 @@ let btnRestar = document.getElementById("btnRestar");
 let cantBox = document.getElementById("cantBox");
 let btnSumar = document.getElementById("btnSumar");
 let btnCantidad = document.getElementById("btnCantidad");
-let numeroElementos = document.getElementById("numeroElementos").innerHTML;
-let numeroElementosTxt = document.getElementById("numeroElementos")
+let numeroElementos = document.getElementById("numeroElementos");
 
-btnSumar.addEventListener("click",function(){
-    let numeroElementosTxt = document.getElementById("numeroElementosTxt").innerHTML
+
+btnSumar.addEventListener("click",function() {
+    let numeroElementosTxt = document.getElementById("numeroElementos").innerHTML;
     
     let numeroElementosInt = parseInt(numeroElementosTxt);
     
