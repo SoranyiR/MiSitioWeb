@@ -85,14 +85,23 @@ imgMini4.addEventListener("click", function(){
 /* -------- BOTONES DE COMPRA ------ */
 
 let btnRestar = document.getElementById("btnRestar");
+let cantBox = document.getElementById("cantBox");
 let btnSumar = document.getElementById("btnSumar");
+let btnCantidad = document.getElementById("btnCantidad");
+let numeroElementos = document.getElementById("numeroElementos").innerHTML;
+let numeroElementosTxt = document.getElementById("numeroElementos")
 
-btnRestar.addEventListener("click",function(){
-    alert("click")
-});
 btnSumar.addEventListener("click",function(){
-    alert("otro click")
-})
+    let numeroElementosTxt = document.getElementById("numeroElementosTxt").innerHTML
+    
+    let numeroElementosInt = parseInt(numeroElementosTxt);
+    
+    let totalElementosInt = numeroElementosInt + 1;
+    let totalElementostxt = totalElementosInt.toString();
+    numeroElementos.innerHTML = totalElementostxt;
+    
+    
+});
 
 
 
