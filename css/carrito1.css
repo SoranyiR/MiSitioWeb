@@ -1,0 +1,47 @@
+/* .img-box-main{
+    display: grid;
+    grid-area: img-box-main;
+    height: 100vh;
+    width: 100%;
+    grid-template: "img-box    "436px
+                    "empty-0   "30px
+                    "box-mini1 "90px/
+                    90px       
+} */
+.box-mini1{
+    grid-area: box-mini1;
+}
+
+.icon-op{
+    width: 60px;
+    height: 60px;
+    background-color: rgb(211, 208, 208);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    border: 1px solid whitesmoke;
+}
+.cant-box{
+    display: flex;
+}
+.btn-restar{
+    border-radius: 10px 0 0 10px;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+}
+.cant-obj{
+    color: rgb(143, 36, 36);
+    font-size: 1.3em;
+}
+.btn-sumar{
+    border-radius: 0px 10px 10px 0px;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+}
+.btn-restar:hover,
+.cant-obj,
+.btn-sumar{
+    cursor: pointer;
+}
+
