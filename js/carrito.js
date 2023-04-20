@@ -103,5 +103,23 @@ btnSumar.addEventListener("click",function() {
     
 });
 
+let click = 0;
+btnSumar.addEventListener("click", function () {
+  click = click + 1;
+  btnCantidad.innerHTML = click;
+  if (click > 10) {
+    btnCantidad.innerHTML = 10;
+    click = click = 10;
+  }
+});
+btnRestar.addEventListener("click", function () {
+    click = click - 1;
+    btnCantidad.innerHTML = click;
+    if (click < 0) {
+        btnCantidad.innerHTML =  0;
+        click = click = 0;
+    }
+    console.log(click)
+});
 
 
