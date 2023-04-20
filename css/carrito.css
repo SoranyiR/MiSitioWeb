@@ -69,7 +69,11 @@ img{
     border: 1px solid whitesmoke;
 }
 .cant-box{
+    position: relative;
     display: flex;
+    top: 400px;
+    left: 100px;
+
 }
 .btn-restar{
     border-radius: 10px 0 0 10px;
@@ -90,6 +94,7 @@ img{
 .btn-sumar{
     cursor: pointer;
 }
+
 
 
 
