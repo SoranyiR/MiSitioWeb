@@ -104,6 +104,10 @@ img{
     width: 100%;
     height: 100vh;
 }
+.light-hidden {
+    display: none;
+    
+}
 
 .main-lightbox {
     width: 550px;

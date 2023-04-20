@@ -144,5 +144,8 @@ btnRestar.addEventListener("click", function () {
     }
     console.log(click)
 }); */
+let ligthBox = document.getElementById("ligthBox")
 
-
+imgBox.addEventListener("click", function() {
+  lightBox.classList.remove("light-hidden");
+});
