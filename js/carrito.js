@@ -62,22 +62,22 @@ const imgMinis = document.querySelectorAll(".img-mini");
 imgMinis.forEach((imgMini, i) => imgMini.addEventListener("click", () => cambiarImagen(`producto${i + 1}`, imgMini)));
 
 
-imgMini1.addEventListener("click", function(){
+imgMini1.addEventListener("click", function () {
     cambiarImagen("producto1", imgMini1);
     imgBox.classList.add("rotate")
 });
 
-imgMini2.addEventListener("click", function(){
+imgMini2.addEventListener("click", function () {
     cambiarImagen("image-product-2", imgMini2);
     imgBox.classList.add("rotate")
 });
 
-imgMini3.addEventListener("click", function(){
+imgMini3.addEventListener("click", function () {
     cambiarImagen("image-product-3", imgMini3);
     imgBox.classList.add("rotate")
 });
 
-imgMini4.addEventListener("click", function(){
+imgMini4.addEventListener("click", function () {
     cambiarImagen("image-product-4", imgMini4);
     imgBox.classList.add("rotate")
 });
@@ -89,21 +89,44 @@ let cantBox = document.getElementById("cantBox");
 let btnSumar = document.getElementById("btnSumar");
 let btnCantidad = document.getElementById("btnCantidad");
 let numeroElementos = document.getElementById("numeroElementos");
+let valorTotal = document.getElementById("valorTotaL")
+let precioInicial = 199000;
 
 
-btnSumar.addEventListener("click",function() {
-    let numeroElementosTxt = document.getElementById("numeroElementos").innerHTML;
-    
+btnSumar.addEventListener("click",  function () {
+
+    let numeroElementosTxt = document.getElementById
+        ("numeroElementos").innerHTML;
     let numeroElementosInt = parseInt(numeroElementosTxt);
-    
-    let totalElementosInt = numeroElementosInt + 1;
-    let totalElementostxt = totalElementosInt.toString();
-    numeroElementos.innerHTML = totalElementostxt;
-    
-    
+    if (numeroElementosInt < 20) {
+        let totalElementosInt = numeroElementosInt + 1;
+        let totalElementostxt = totalElementosInt.toString();
+        numeroElementos.innerHTML = totalElementostxt;
+        let precioTotal = precioInicial * totalElementosInt;
+        document.getElementById("valorTotal").innerHTML = "$" + precioTotal.toLocaleString("es");
+        console.log(totalElementosInt)
+    }
+
+
 });
 
-let click = 0;
+btnRestar.addEventListener("click", function () {
+    let numeroElementosTxt = document.getElementById
+        ("numeroElementos").innerHTML;
+    let numeroElementosInt = parseInt(numeroElementosTxt);
+    if (numeroElementosInt > 0) {
+        let totalElementosInt = numeroElementosInt - 1;
+        let totalElementostxt = totalElementosInt.toString();
+        numeroElementos.innerHTML = totalElementostxt;
+        let precioTotal = precioInicial * totalElementosInt;
+        document.getElementById("valorTotal").innerHTML = "$" + precioTotal.toLocaleString("es");
+        console.log(totalElementosInt)
+    }
+
+
+});
+
+/* let click = 0;
 btnSumar.addEventListener("click", function () {
   click = click + 1;
   btnCantidad.innerHTML = click;
@@ -120,6 +143,6 @@ btnRestar.addEventListener("click", function () {
         click = click = 0;
     }
     console.log(click)
-});
+}); */
 
 

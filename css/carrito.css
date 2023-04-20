@@ -9,7 +9,7 @@
 }
 .box-main{
     display: grid;
-    margin: 0 20px;
+    margin: 210px 0px 0px 420px;
     grid-template:"img-box-main   empty-right"/ 
                     435px            1fr;
 }
@@ -94,6 +94,63 @@ img{
 .btn-sumar{
     cursor: pointer;
 }
+
+.lightbox {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(64, 64, 64,.8);
+    width: 100%;
+    height: 100vh;
+}
+
+.main-lightbox {
+    width: 550px;
+    height: 600px;
+    
+
+}
+
+
+.btn-style {
+  border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(24, 24, 24);
+    position: relative;
+    top: 198px ;
+
+}
+
+.btn-atras{
+    left: -25px;
+    z-index: 20;
+}
+
+.btn-adelante {
+    left: 95%;
+    z-index: 20;
+    top: 231px;
+    
+}
+
+.style-btn {
+    font-weight: 900;
+    font-size: 1.3em;
+}
+.img-main-light {
+    position: relative;
+    top: -88px;
+    width: 100%;
+    border-radius: 20px;
+    z-index: 10;
+}
+
 
 
 
