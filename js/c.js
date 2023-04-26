@@ -154,3 +154,4 @@ btnX.addEventListener("click", function(){
 lightbox.classList.add("ligth-hidden");
 
 })
+
