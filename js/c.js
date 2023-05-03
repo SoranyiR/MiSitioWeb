@@ -17,15 +17,15 @@ let ImgMini2 = document.getElementById("BoxImgMini2.0")
 let ImgMini3 = document.getElementById("BoxImgMini3.0")
 let ImgMini4 = document.getElementById("BoxImgMini4.0")
 
-let imgboxx = document.getElementById("imgboxx")
+let imgboxx = document.getElementById("imgbox")
 
-imgboxx.addEventListener("click", function () {
+cont.addEventListener("click", function () {
     lightbox.classList.remove("ligth-hidden")
 })
 
 imgUnoModal.addEventListener("click", function () {
     console.log("imgUno " + imgUno)
-    cont.setAttribute("src", "img/image-product-1.jpg")
+    imgboxx.setAttribute("src", "img/image-product-1.jpg")
     imgUnoModal.classList.add("box-img-mini")
     imgUnoModa2.classList.remove("box-img-mini")
     imgUnoModa3.classList.remove("box-img-mini")
@@ -33,7 +33,7 @@ imgUnoModal.addEventListener("click", function () {
     ImgMini1.classList.add("img-mini-a")
     ImgMini2.classList.remove("img-mini-a")
     ImgMini3.classList.remove("img-mini-a")
-    imgUnoModa4.classList.remove("img-mini-a")
+    ImgMini4.classList.remove("img-mini-a")
 
     boxImgMini1.classList.add("box-img-mini")
     boxImgMini2.classList.remove("box-img-mini")
@@ -42,6 +42,8 @@ imgUnoModal.addEventListener("click", function () {
     imgUno.classList.add("img-mini-a")
     imgDos.classList.remove("img-mini-a")
     imgTres.classList.remove("img-mini-a")
+    imgCuatro.classList.remove("img-mini-a")
+
 })
 imgUno.addEventListener("click", function () {
     cont.setAttribute("src", "img/image-product-1.jpg")
@@ -52,7 +54,6 @@ imgUno.addEventListener("click", function () {
     imgUno.classList.add("img-mini-a")
     imgDos.classList.remove("img-mini-a")
     imgTres.classList.remove("img-mini-a")
-    im
 
     // imgCuatro.classList.remove("img-mini-a")
     // boxImgMini1.classList.add("box-img-mini")
@@ -77,6 +78,32 @@ imgDos.addEventListener("click", function () {
     imgTres.classList.remove("img-mini-a")
     imgCuatro.classList.remove("img-mini-a")
 })
+
+imgUnoModa2.addEventListener("click", function () {
+    console.log("imgUno " + imgUno)
+    imgboxx.setAttribute("src", "img/image-product-2.jpg")
+    imgUnoModal.classList.remove("box-img-mini")
+    imgUnoModa2.classList.add("box-img-mini")
+    imgUnoModa3.classList.remove("box-img-mini")
+    imgUnoModa4.classList.remove("box-img-mini")
+    ImgMini1.classList.remove("img-mini-a")
+    ImgMini2.classList.add("img-mini-a")
+    ImgMini3.classList.remove("img-mini-a")
+    ImgMini4.classList.remove("img-mini-a")
+
+    boxImgMini1.classList.remove("box-img-mini")
+    boxImgMini2.classList.add("box-img-mini")
+    boxImgMini3.classList.remove("box-img-mini")
+    boxImgMini4.classList.remove("box-img-mini")
+    imgUno.classList.remove("img-mini-a")
+    imgDos.classList.add("img-mini-a")
+    imgTres.classList.remove("img-mini-a")
+    imgCuatro.classList.remove("img-mini-a")
+
+})
+
+
+
 imgTres.addEventListener("click", function () {
     cont.setAttribute("src", "img/image-product-3.jpg")
     boxImgMini1.classList.remove("box-img-mini")
@@ -88,6 +115,30 @@ imgTres.addEventListener("click", function () {
     imgTres.classList.add("img-mini-a")
     imgCuatro.classList.remove("img-mini-a")
 })
+imgUnoModa3.addEventListener("click", function () {
+    console.log("imgUno " + imgUno)
+    imgboxx.setAttribute("src", "img/image-product-3.jpg")
+    imgUnoModal.classList.remove("box-img-mini")
+    imgUnoModa2.classList.remove("box-img-mini")
+    imgUnoModa3.classList.add("box-img-mini")
+    imgUnoModa4.classList.remove("box-img-mini")
+    ImgMini1.classList.remove("img-mini-a")
+    ImgMini2.classList.remove("img-mini-a")
+    ImgMini3.classList.add("img-mini-a")
+    ImgMini4.classList.remove("img-mini-a")
+
+    boxImgMini1.classList.remove("box-img-mini")
+    boxImgMini2.classList.remove("box-img-mini")
+    boxImgMini3.classList.add("box-img-mini")
+    boxImgMini4.classList.remove("box-img-mini")
+    imgUno.classList.remove("img-mini-a")
+    imgDos.classList.remove("img-mini-a")
+    imgTres.classList.add("img-mini-a")
+    imgCuatro.classList.remove("img-mini-a")
+
+})
+
+
 imgCuatro.addEventListener("click", function () {
     cont.setAttribute("src", "img/image-product-4.jpg")
     boxImgMini1.classList.remove("box-img-mini")
@@ -98,6 +149,28 @@ imgCuatro.addEventListener("click", function () {
     imgDos.classList.remove("img-mini-a")
     imgTres.classList.remove("img-mini-a")
     imgCuatro.classList.add("img-mini-a")
+})
+imgUnoModa4.addEventListener("click", function () {
+    console.log("imgUno " + imgUno)
+    imgboxx.setAttribute("src", "img/image-product-4.jpg")
+    imgUnoModal.classList.remove("box-img-mini")
+    imgUnoModa2.classList.remove("box-img-mini")
+    imgUnoModa3.classList.remove("box-img-mini")
+    imgUnoModa4.classList.add("box-img-mini")
+    ImgMini1.classList.remove("img-mini-a")
+    ImgMini2.classList.remove("img-mini-a")
+    ImgMini3.classList.remove("img-mini-a")
+    ImgMini4.classList.add("img-mini-a")
+
+    boxImgMini1.classList.remove("box-img-mini")
+    boxImgMini2.classList.remove("box-img-mini")
+    boxImgMini3.classList.remove("box-img-mini")
+    boxImgMini4.classList.add("box-img-mini")
+    imgUno.classList.remove("img-mini-a")
+    imgDos.classList.remove("img-mini-a")
+    imgTres.classList.remove("img-mini-a")
+    imgCuatro.classList.add("img-mini-a")
+
 })
 
 let btnRestar = document.getElementById("btnRestar");
@@ -187,17 +260,126 @@ btnRestar.addEventListener("click", function () {
     };
 });
 
-
-
-
 let lightbox = document.getElementById("lightbox");
 let btnX = document.getElementById("btnX");
-
-
-
 
 btnX.addEventListener("click", function () {
     lightbox.classList.add("ligth-hidden");
 
 })
 
+let left = 0;
+let right = 0;
+let btnL = document.getElementById("btnL");
+btnL.addEventListener("click", function () {
+    left = left + 1;
+    if (left == 1) {
+        imgboxx.setAttribute("src", "img/image-product-4.jpg")
+        imgUnoModal.classList.remove("box-img-mini")
+        imgUnoModa2.classList.remove("box-img-mini")
+        imgUnoModa3.classList.remove("box-img-mini")
+        imgUnoModa4.classList.add("box-img-mini")
+        ImgMini1.classList.remove("img-mini-a")
+        ImgMini2.classList.remove("img-mini-a")
+        ImgMini3.classList.remove("img-mini-a")
+        ImgMini4.classList.add("img-mini-a")
+        right = left
+        console.log("right " + right)
+        console.log("left " + left)
+    }
+
+    if (left == 2) {
+        imgboxx.setAttribute("src", "img/image-product-3.jpg")
+        imgUnoModal.classList.remove("box-img-mini")
+        imgUnoModa2.classList.remove("box-img-mini")
+        imgUnoModa3.classList.add("box-img-mini")
+        imgUnoModa4.classList.remove("box-img-mini")
+        ImgMini1.classList.remove("img-mini-a")
+        ImgMini2.classList.remove("img-mini-a")
+        ImgMini3.classList.add("img-mini-a")
+        ImgMini4.classList.remove("img-mini-a")
+        right = left
+    }
+
+    if (left == 3) {
+        imgboxx.setAttribute("src", "img/image-product-2.jpg")
+        imgUnoModal.classList.remove("box-img-mini")
+        imgUnoModa2.classList.add("box-img-mini")
+        imgUnoModa3.classList.remove("box-img-mini")
+        imgUnoModa4.classList.remove("box-img-mini")
+        ImgMini1.classList.remove("img-mini-a")
+        ImgMini2.classList.add("img-mini-a")
+        ImgMini3.classList.remove("img-mini-a")
+        ImgMini4.classList.remove("img-mini-a")
+        right = left
+    }
+
+    if (left == 4) {
+        imgboxx.setAttribute("src", "img/image-product-1.jpg")
+        imgUnoModal.classList.add("box-img-mini")
+        imgUnoModa2.classList.remove("box-img-mini")
+        imgUnoModa3.classList.remove("box-img-mini")
+        imgUnoModa4.classList.remove("box-img-mini")
+        ImgMini1.classList.add("img-mini-a")
+        ImgMini2.classList.remove("img-mini-a")
+        ImgMini3.classList.remove("img-mini-a")
+        ImgMini4.classList.remove("img-mini-a")
+        right = left
+        left = 0;
+    }
+
+})
+
+
+let btnR = document.getElementById("btnR")
+btnR.addEventListener("click", function () {
+    right = right + 1;
+    if (right == 1) {
+        imgboxx.setAttribute("src", "img/image-product-1.jpg")
+        imgUnoModal.classList.add("box-img-mini")
+        imgUnoModa2.classList.remove("box-img-mini")
+        imgUnoModa3.classList.remove("box-img-mini")
+        imgUnoModa4.classList.remove("box-img-mini")
+        ImgMini1.classList.add("img-mini-a")
+        ImgMini2.classList.remove("img-mini-a")
+        ImgMini3.classList.remove("img-mini-a")
+        ImgMini4.classList.remove("img-mini-a")
+    }
+
+    if (right == 2) {
+        imgboxx.setAttribute("src", "img/image-product-2.jpg")
+        imgUnoModal.classList.remove("box-img-mini")
+        imgUnoModa2.classList.add("box-img-mini")
+        imgUnoModa3.classList.remove("box-img-mini")
+        imgUnoModa4.classList.remove("box-img-mini")
+        ImgMini1.classList.remove("img-mini-a")
+        ImgMini2.classList.add("img-mini-a")
+        ImgMini3.classList.remove("img-mini-a")
+        ImgMini4.classList.remove("img-mini-a")
+    }
+
+    if (right == 3) {
+        imgboxx.setAttribute("src", "img/image-product-3.jpg")
+        imgUnoModal.classList.remove("box-img-mini")
+        imgUnoModa2.classList.remove("box-img-mini")
+        imgUnoModa3.classList.add("box-img-mini")
+        imgUnoModa4.classList.remove("box-img-mini")
+        ImgMini1.classList.remove("img-mini-a")
+        ImgMini2.classList.remove("img-mini-a")
+        ImgMini3.classList.add("img-mini-a")
+        ImgMini4.classList.remove("img-mini-a")
+    }
+
+    if (right == 4) {
+        imgboxx.setAttribute("src", "img/image-product-4.jpg")
+        imgUnoModal.classList.remove("box-img-mini")
+        imgUnoModa2.classList.remove("box-img-mini")
+        imgUnoModa3.classList.remove("box-img-mini")
+        imgUnoModa4.classList.add("box-img-mini")
+        ImgMini1.classList.remove("img-mini-a")
+        ImgMini2.classList.remove("img-mini-a")
+        ImgMini3.classList.remove("img-mini-a")
+        ImgMini4.classList.add("img-mini-a")
+        right = 0;
+    }
+})
