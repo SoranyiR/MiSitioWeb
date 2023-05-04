@@ -71,17 +71,27 @@
    left: 0;
    transition: left 1s;
 }
-
+.canada-camry{
+    grid-area: canada1;
+    position: relative;
+    top: -85px;
+    z-index: 10;
+    left: -100%;
+    transition: left 2s;
+}
 .canada-camry-hidden{
     grid-area: canada1;
     position: relative;
+    top: -85px;
+    z-index: 10;
     left: -100%;
+    transition: left 2s;
 }
-.canada1:hover{
+/* .canada1:hover{
     position: relative;
     left: -50;
 
-}
+} */
 .iconos {
     grid-area: iconos;
     height: 500px;
