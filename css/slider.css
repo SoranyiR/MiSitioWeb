@@ -8,19 +8,21 @@
     height: 60px;
     background-color: rgb(0, 42, 119);
     grid-area: main-nav;
- }
-.main-content{
-   display: grid;
-   grid-template: "empty-left main-nav empty-right" 
-                  "empty-left canada1  empty-right" 
-                  "empty-left iconos   empty-right" /
-                   1fr        1280px   1fr;
+}
+
+.main-content {
+    display: grid;
+    grid-template: "empty-left main-nav empty-right"
+        "empty-left canada1  empty-right"
+        "empty-left iconos   empty-right" /
+        1fr 1280px 1fr;
 }
 
 .empty-left {
     grid-area: empty-left;
-   background-color: rgb(223, 220, 225);
+    background-color: rgb(223, 220, 225);
 }
+
 .empty-right {
     grid-area: empty-right;
     background-color: rgb(223, 220, 225);
@@ -28,7 +30,7 @@
 }
 
 .main-nav {
-   grid-area: main-nav;
+    grid-area: main-nav;
 }
 
 .logo-box {
@@ -36,7 +38,7 @@
 }
 
 
-.img-logo{
+.img-logo {
     height: 40px;
     margin-top: 10px;
     margin-left: 50px;
@@ -48,7 +50,7 @@
     margin-top: 15px;
     margin-right: 40px;
     float: right;
-    display:inline-flex ;
+    display: inline-flex;
 }
 
 .style-il {
@@ -63,15 +65,33 @@
     padding: 15px 25px 0 25px;
 }
 
-.canada1 {
-   grid-area: canada1;
-   position: relative;
-   top: -85px;
-   z-index: 10;
-   left: 0;
-   transition: left 1s;
+.canada1-camry {
+    grid-area: canada1;
+    position: relative;
+    top: -54px;
+    z-index: 10;
+    left: 0;
+    transition: left 1s;
 }
-.canada-camry{
+.canada2-camry {
+
+    position: relative;
+    top: -54px;
+    /* z-index: 10; */
+    left: 0;
+    transition: left 1s;
+}
+
+.canada-camry {
+    grid-area: canada1;
+    position: relative;
+    top: -54px;
+    z-index: 10;
+    left: -100%;
+    transition: left 2s;
+}
+
+.canada-camry-hidden {
     grid-area: canada1;
     position: relative;
     top: -85px;
@@ -79,14 +99,15 @@
     left: -100%;
     transition: left 2s;
 }
-.canada-camry-hidden{
-    grid-area: canada1;
+/* .canada2-camry{
+    grid-area: canada2;
     position: relative;
-    top: -85px;
+    top: -54px;
     z-index: 10;
-    left: -100%;
-    transition: left 2s;
-}
+    left: 0;
+    transition: left 1s;
+} */
+
 /* .canada1:hover{
     position: relative;
     left: -50;
@@ -100,11 +121,11 @@
 .flecha-adelante {
     width: 50px;
     position: relative;
-    top: 500px;
-    left: 1100px;
+    top: 430px;
+    left: 1170px;
     z-index: 20;
 
-   
+
 }
 
 .flecha-adelante:hover {
@@ -115,10 +136,25 @@
 .flecha-atras {
     width: 50px;
     position: relative;
-    top: 515px;
-    left: -30px;
+    top: 430px;
+    left: -1px;
     z-index: 20;
 }
+
 .flecha-atras:hover {
     cursor: pointer;
+}
+
+.images {
+    /* position: absolute; */
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+}
+   
+.img {
+    top: -54px;
+
+    position: absolute;
 }
