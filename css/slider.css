@@ -6,26 +6,27 @@
 .main-nav {
     width: 100%;
     height: 60px;
-    background-color: rgb(0, 42, 119);
+    background-color: rgb(37, 37, 37);
     grid-area: main-nav;
 }
 
 .main-content {
+    background-color: aqua;
     display: grid;
-    grid-template: "empty-left main-nav empty-right"
-        "empty-left canada1  empty-right"
-        "empty-left iconos   empty-right" /
-        1fr 1280px 1fr;
+    grid-template:  "empty-left   main-nav empty-right"
+                    "empty-left  canada1  empty-right"
+                    "empty-left  iconos   empty-right" /
+                     1fr         1571px   1fr;
 }
 
 .empty-left {
     grid-area: empty-left;
-    background-color: rgb(223, 220, 225);
+    background-color: white;
 }
 
 .empty-right {
     grid-area: empty-right;
-    background-color: rgb(223, 220, 225);
+    background-color: white;
 
 }
 
@@ -65,7 +66,8 @@
     padding: 15px 25px 0 25px;
 }
 
-.canada1-camry {
+
+/* .canada1-camry {
     grid-area: canada1;
     position: relative;
     top: -54px;
@@ -77,7 +79,7 @@
 
     position: relative;
     top: -54px;
-    /* z-index: 10; */
+    // z-index: 10;
     left: 0;
     transition: left 1s;
 }
@@ -98,7 +100,7 @@
     z-index: 10;
     left: -100%;
     transition: left 2s;
-}
+} */
 /* .canada2-camry{
     grid-area: canada2;
     position: relative;
@@ -122,7 +124,7 @@
     width: 50px;
     position: relative;
     top: 430px;
-    left: 1170px;
+    left: 1430px;
     z-index: 20;
 
 
@@ -137,7 +139,7 @@
     width: 50px;
     position: relative;
     top: 430px;
-    left: -1px;
+    left: 20px;
     z-index: 20;
 }
 
@@ -147,14 +149,29 @@
 
 .images {
     /* position: absolute; */
+    /* width: 300%; */
     position: fixed;
+    /* display: inline-flex; */
     height: 100%;
-    width: 100%;
-
+    width: 90%;
 }
-   
+
 .img {
     top: -54px;
-
+    height: 90vh;
+    width: 83.6%;
     position: absolute;
 }
+
+.img-nav {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 10px;
+    margin-top: -10px;
+}
+
+.nick {
+    width: 90px;
+}
+
