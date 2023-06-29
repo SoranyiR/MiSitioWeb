@@ -77,3 +77,29 @@ let primer/nombre = "saul";
 let for = 5;
 let switch = "Deporte";
 let while = 12.5; 
+
+
+
+// Ejercicio N. 6
+console.log("Operadores Aritmeticos");
+let numArit1 = 9;
+let numArit2 = 6;
+console.log("Suma: ");
+console.log("Suma numArit1 (9) + numArit2 (6): " + (numArit1 + numArit2));
+console.log("Resta: ");
+console.log("numArit2 (6) - numArit2 (9): " + (numArit2 - numArit1));
+console.log("Multiplicacion: ");
+console.log("numArit1 (9) * numArit2 (6): " + (numArit1 * numArit2));
+console.log("Division: ");
+let resulDiv = numArit1 / numArit2;
+console.log("Residuo:" + (numArit1 % numArit2));
+
+console.log("numArit1 (9) / numArit2 (6): " + (numArit1 / numArit2));
+console.log("Redondear Segun el promedio");
+console.log(Math.round(resulDiv));
+console.log("Redondear hacia abajo");
+console.log(Math.floor(resulDiv));
+console.log("Redondear hacia arriba");
+console.log(Math.ceil(resulDiv));
+
+
