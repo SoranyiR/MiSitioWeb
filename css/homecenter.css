@@ -5,6 +5,7 @@
 }
 .container{
     display: grid;
+    
 }
 .nav-info{
     height: 2.4vh;
@@ -153,4 +154,63 @@ h7{
    }
 }
 
+
+.container2{
+   width: 100%;
+   height: 60px;
+   background-color: rgb(255, 255, 255);
+   display: flex;
+   
+
+}
+.contenedor22{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 67px;
+    border: 1px solid #ccc;
+    justify-content: center;
+   text-align: center;
+}
+.item{
+    width: 90px;
+   font-size: 0.8em;
+    padding: 10px;
+    border: 1px solid rgb(240, 240, 240);
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid rgb(240, 240, 240);
+    box-sizing: border-box;
+}
+.imagenHom{
+   background-size: cover;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza el contenido */
+
+}
+.contP{
+   width: 100%;
+   background-color: rgb(255, 255, 255);
+   display: flex;
+   
+
+}
+.contenedor11{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 5px;
+    border: 1px solid #ccc;
+    justify-content: center;
+   text-align: center;
+}
+.boxx{
+   width: 10%;
+   font-size: 0.8em;
+    padding: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px;
+    box-sizing: border-box;
+}
 
