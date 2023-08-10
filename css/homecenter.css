@@ -17,6 +17,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    height: 80px;
 }
 .input-buscador{
    width: 100%;
@@ -176,10 +177,10 @@ h7{
     width: 90px;
    font-size: 0.8em;
     padding: 10px;
-    border: 1px solid rgb(240, 240, 240);
+ 
     box-sizing: border-box;
     padding: 10px;
-    border: 1px solid rgb(240, 240, 240);
+    
     box-sizing: border-box;
 }
 .imagenHom{
@@ -203,6 +204,7 @@ h7{
     border: 1px solid #ccc;
     justify-content: center;
    text-align: center;
+  
 }
 .boxx{
    width: 10%;
@@ -212,5 +214,6 @@ h7{
     padding: 10px;
     border: 1px;
     box-sizing: border-box;
+    background-color: rgb(240, 240, 240);
 }
 
