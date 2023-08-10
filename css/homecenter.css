@@ -18,12 +18,29 @@
     gap: 20px;
 }
 .input-buscador{
-    height: 35px;
-    width: 30vw;
+   width: 100%;
+   height: 100%; 
+}
+.container-buscador{
+   width: 30vw;
+   height: 35px;
+   position: relative;
+}
+.div-logo-buscador{
+   height: 100%;
+   width: 30px;
+   position: absolute;
+   top: 0;
+   right: 0%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .container-buscador i{
-    position: relative;
-    left: -26px;
+
+    left: 0;
+    z-index: 9;
+
 }
 .container-ubicacion{
     display: grid;
@@ -52,15 +69,17 @@ i{
     justify-content: center;
     align-items: center;
 }
-.container-compras span{
-    border-radius: 100%;
+.container-compras div{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
     background-color: rgb(231, 24,24);
-    padding: 5px;
     color: aliceblue;
 }
-.container-compras i{
-    font-size: 25px;
-}
+
 .container-puntos{
     display: grid;
     grid-template:"img-puntos info-puntos"1fr
@@ -78,11 +97,60 @@ i{
     display: grid;
     place-items: center;
     grid-template: "icono-cuenta cuenta-title"1fr/
-                    1fr  1fr ;
+                    auto  1fr ;
 }
 .cuenta-title{
     grid-area: cuenta-title;
     font-size: 1.5em;
+}
+h7{
+   color: rgb(0, 114, 206);
+}
+.casaHome{
+   display: none;
+}
+
+
+@media screen and (max-width:1250px){
+   .info-puntos{
+      display: none;
+      font-size: 2em;
+   }
+}
+@media screen and (max-width:1250px){
+   .container-puntos{
+      display: none;
+      font-size: 2em;
+   }
+}
+@media screen and (max-width:1020px){
+   .container-ubicacion{
+      display: none;
+      font-size: 2em;
+   }
+}
+@media screen and (max-width:800px){
+   .input-buscador{
+      display: none;
+      font-size: 2em;
+   }
+}
+@media screen and (max-width:650px){
+   .imgHome{
+      display: none;
+   }
+   .casaHome{
+      display: flex;
+      width: 70px;
+      height: 35px;
+      margin-left: -50px;
+   }
+   .cuenta-title{
+       display: none;
+      font-size: 2em;
+   
+
+   }
 }
 
 
