@@ -217,3 +217,115 @@ h7{
     background-color: rgb(240, 240, 240);
 }
 
+.ana{
+   width: 406px;
+   height:519px ;
+   border: 1px solid rgb(234, 238, 243);
+   margin-left: 75%;
+}
+.anahome{
+   width: 406px;
+   height:72px ;
+   border: 1px ;
+   display: flex;
+   align-items: center;
+   background-color: rgb(0, 93, 173);
+   color: white;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   
+}
+h1{
+   font-size: 1.5em;  
+   margin-left: 15px;
+}
+
+.img-ana{
+   width: 50px;
+   margin-left: 8px;
+   
+}
+
+.chat{
+   width: 406px;
+   height:402px ;
+   background-color: rgb(234, 238, 243);
+   border-top: 2px rgb(0, 114, 206);
+}
+.escribe{
+   width:406px ;
+   height: 43px;
+   background-color: rgb(234, 238, 243);
+   border-top: 2px solid rgb(0, 114, 206);
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+.escribe i {
+   left: 0;
+   z-index: 9;
+}
+.escribe22{
+   width: 28px;
+   height: 30px;
+   position: relative;
+ 
+   
+
+}
+.input-escribe{
+   width:390px ;
+   height: 43px; 
+   background-color: rgb(234, 238, 243);
+   border: 1px solid rgb(234, 238, 243);
+   outline: none;
+   margin-left: 15px;
+   
+}
+.div-logo-escribe{
+   height: 100%;
+   width: 10px;
+   position: absolute;
+   top: 0;
+   right: -1300%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.3em;
+}
+
+.ava-ana{
+   width: 102px;
+   height: 62px;
+   cursor: pointer;
+}
+.exit{
+   height: 100%;
+   width: 10px;
+   font-size: 3.3em;
+}
+.imgAna{
+   display: flex;
+}
+.imgana{
+   width: 100px;
+   height: 100px;
+   margin-left: 35px;
+   margin-top: 5px;
+   border-radius: 3px solid red; 
+}
+h5{
+   margin-left: 15px;
+   width: 200px;
+   height: 100px;
+   background-color: rgb(255, 255, 255);
+}
+h6{
+   margin-top: 10px;
+   margin-left: 15px;
+   width: 300px;
+   height: 100px;
+   top: 100px;
+   background-color: rgb(255, 255, 255);
+   font-size: 0.9em;
+}
+
