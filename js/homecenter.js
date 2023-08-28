@@ -52,7 +52,7 @@ let anajs = document.getElementById("anajs");
 
 x.addEventListener("click",function(){
     if (anajs.style.display === "none") {
-         anajs.style.display = "block"
+         anajs.style.display = "grid"
     } else{
         anajs.style.display = "none";
     } 
