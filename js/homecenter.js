@@ -45,3 +45,17 @@ iconArrowRight.addEventListener("click", function(){
         idSlider.classList.remove("slider-view-3");
     }
 });
+
+
+let x = document.getElementById("x");
+let anajs = document.getElementById("anajs");
+
+x.addEventListener("click",function(){
+    if (anajs.style.display === "none") {
+         anajs.style.display = "block"
+    } else{
+        anajs.style.display = "none";
+    } 
+}
+
+);
