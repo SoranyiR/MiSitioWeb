@@ -59,3 +59,20 @@ x.addEventListener("click",function(){
 }
 
 );
+
+
+let icon = document.getElementById("icon");
+
+icon.addEventListener("click",function(){
+    if (anajs.style.display === "none") {
+         anajs.style.display = "grid"
+         x.style.display ==="none"
+         x.style.display = "grid"
+    } else{
+        anajs.style.display = "none"
+        x.style.display = "none";
+    } 
+}
+
+);
+
