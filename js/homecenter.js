@@ -49,30 +49,56 @@ iconArrowRight.addEventListener("click", function(){
 
 let x = document.getElementById("x");
 let anajs = document.getElementById("anajs");
+let icon = document.getElementById("icon")
+
+
 
 x.addEventListener("click",function(){
-    if (anajs.style.display === "none") {
-         anajs.style.display = "grid"
+    if (anajs.style.display = "none") {
+         anajs.style.display === "grid"
+         x.style.display = "none"
+         icon.style.display = "grid"
     } else{
-        anajs.style.display = "none";
+        anajs.style.display = "none"
+        icon.style.display === "grid";
     } 
 }
 
 );
-
-
-let icon = document.getElementById("icon");
 
 icon.addEventListener("click",function(){
     if (anajs.style.display === "none") {
+         icon.style.display = "none"
          anajs.style.display = "grid"
-         x.style.display ==="none"
          x.style.display = "grid"
     } else{
-        anajs.style.display = "none"
-        x.style.display = "none";
+        anajs.style.display = "none";
+        
     } 
 }
 
 );
+
+
+// icon.addEventListener("click", function(){
+//     if (anajs.style.display === "none"){
+//         anajs.anajs.display = "grid"
+//         icon.style.display === "none"
+//     } else {
+
+//     }
+// });
+
+// icon.addEventListener("click",function(){
+//     if (anajs.style.display === "none") {
+//          anajs.style.display = "grid"
+//          x.style.display ==="none"
+//          x.style.display = "grid"
+//     } else{
+//         anajs.style.display = "none"
+//         x.style.display = "none"; 
+//     } 
+// });
+
+
 

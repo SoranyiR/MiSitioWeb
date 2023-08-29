@@ -227,7 +227,7 @@ h7{
    height: 100vh;
    top: 0;
    width: 406px;
-   display: grid;
+   display: none;
    grid-template: "frm-header" 70px
                   "frm-body"  minmax(150px, 90vh)
                   "frm-btn"  10px
