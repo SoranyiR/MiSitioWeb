@@ -233,7 +233,8 @@ h7{
                   "frm-btn"  10px
                   "frm-input" 54px
                   "frm-exit" 80px/
-                   406px;     
+                   406px;   
+   z-index: 9; 
 }
 .form-header {
    grid-area: frm-header;
@@ -514,6 +515,7 @@ h7{
    grid-area: frm-exit;
    display: flex;
    justify-content: flex-end;
+   z-index: 10;
 }
 .icon-style{
    width: 30px;
@@ -533,4 +535,5 @@ h7{
    grid-area: frm-exit;
    display: flex;
    justify-content: flex-end;
+   z-index: 10;
 }

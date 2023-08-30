@@ -57,17 +57,17 @@ x.addEventListener("click",function(){
     if (anajs.style.display = "none") {
          anajs.style.display === "grid"
          x.style.display = "none"
-         icon.style.display = "grid"
+         icon.style.display = "flex"
     } else{
         anajs.style.display = "none"
-        icon.style.display === "grid";
+        icon.style.display ="flex";
     } 
 }
 
 );
 
 icon.addEventListener("click",function(){
-    if (anajs.style.display === "none") {
+    if (anajs.style.display = "none") {
          icon.style.display = "none"
          anajs.style.display = "grid"
          x.style.display = "grid"
