@@ -267,6 +267,8 @@ h7{
    grid-template: "empty-left      form-text       empty-right"
                   "icons-slider   icons-slider    empty-right" /
                    50px            1fr              40px;
+   overflow-y: auto;
+   overflow-x: hidden;
 }
 .img-ana-II {
    height: 90px;
@@ -308,6 +310,7 @@ h7{
    display: grid;
    grid-template: "box-icon-arrow-left box-main-slider box-icon-arrow-right" /
                    50px                310px            50px;
+   margin-top: 30px;
 }
 .box-main-slider {
    grid-area: box-main-slider;
@@ -445,7 +448,7 @@ h7{
    margin-top: 10px;
 }
 .form-btn{
-   background-color: yellow;
+   background-color: rgb(234,238,243);
    grid-area: frm-btn;
    display: flex;
    flex-direction: row;
