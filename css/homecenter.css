@@ -224,9 +224,9 @@ h7{
 .form-ana {
    position: fixed;
    right: 20px;
-   height: 100vh;
-   top: 0;
-   width: 406px;
+   height: 73vh;
+   top: 240px;
+   width: 405px;
    display: none;
    grid-template: "frm-header" 70px
                   "frm-body"  minmax(150px, 90vh)
