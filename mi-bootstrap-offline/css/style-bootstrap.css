@@ -12,3 +12,13 @@ height: 300px;
     width: 30px;
     
 }
+
+.icon-hamburguer {
+    font-size: 2.5em;
+    color: black;
+    outline: none;
+}
+
+.icon-hamburguer:hover{
+    cursor: pointer;
+}
