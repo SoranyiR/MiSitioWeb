@@ -68,7 +68,6 @@ color: rgb(48, 48, 48);
     justify-content: flex-end;
 }
 .corazon{
-    visibility: hidden;
     width: 28px;
     height: 28px;
     border-radius: 14px;
