@@ -11,10 +11,10 @@ class Automovil{
 }
 
 let auto1 = new Automovil("Toyota","Prado 2.8 Tx-l", 200000000, 2021, "pitalito - Huila", 35900,"img/Toyota Prado Tx-l 3.0.jpeg");
-let auto2 = new Automovil("ford","Prado 2.8 Tx-l", 300000000, 2021, "bruselas - Huila", 45900,"img/ford.jpg");
-let auto3 = new Automovil("bmw","Prado 2.8 Tx-l", 50000000, 2021, "neiva - Huila", 39900,"img/BMW 320i. 1100x765jepg.jpg");
-let auto4 = new Automovil("kia","Prado 2.8 Tx-l", 13000000, 2021, "isnos - Huila", 12200,"img/kia.jpg");
-let auto5 = new Automovil("mazda","Prado 2.8 Tx-l", 25600000, 2021, "pitalito - Huila", 21900,"img/mazda.jpg");
+let auto2 = new Automovil("ford","FOCUS 4.6 ", 300000000, 2021, "bruselas - Huila", 45900,"img/ford.jpg");
+let auto3 = new Automovil("bmw","Rolls Royce", 500000000, 2021, "neiva - Huila", 39900,"img/BMW 320i. 1100x765jepg.jpg");
+let auto4 = new Automovil("kia","All-New Carens", 130000000, 2021, "isnos - Huila", 12200,"img/kia.jpg");
+let auto5 = new Automovil("mazda","Mazda 6 / Mazda Atenza", 250600000, 2021, "pitalito - Huila", 21900,"img/mazda.jpg");
 
 var carrosArrays = [auto1, auto2, auto3, auto4, auto5  ]
 
@@ -22,7 +22,7 @@ let inputBusqueda = document.getElementById("inputBusqueda");
 
 inputBusqueda.addEventListener("keydown", function(event){
 // window.addEventListener("load", function(event){
-
+    mainContent.innerHTML="";
     if(event.key == "Enter"){
         carrosArrays.forEach(function(auto, indice){
             console.log("Auto" + (indice + 1) + ":");
@@ -69,16 +69,16 @@ inputBusqueda.addEventListener("keydown", function(event){
     infoMarca.setAttribute("class", "info-marca");
     let txtMarca = document.createElement("label");
     infoMarca.appendChild(txtMarca);
-    txtMarca.innerText =auto1.marca;
+    txtMarca.innerText =auto.marca;
     txtMarca.setAttribute("class", "txt-marca")
 
     let txtModelo = document.createElement("label");
     infoMarca.appendChild(txtModelo);
-    txtModelo.innerText= " "+ auto1.modelo;
+    txtModelo.innerText= " "+ auto.modelo;
     txtModelo.setAttribute("class", "txt-modelo")
 
     /*precio*/
-    let precioFormat = new Intl.NumberFormat("de-DE").format(auto1.precio);
+    let precioFormat = new Intl.NumberFormat("de-DE").format(auto.precio);
     let txtPrecio = this.document.createElement("label");
     boxInfo.appendChild(txtPrecio);
     txtPrecio.innerHTML = "$" + precioFormat;
@@ -92,7 +92,7 @@ inputBusqueda.addEventListener("keydown", function(event){
 
     let txtanyo = document.createElement("label");
     boxProcedencia.appendChild(txtanyo);
-    txtanyo.innerHTML = auto1.anyo + " · ";
+    txtanyo.innerHTML = auto.anyo + " · ";
 
     let txtKilometros = document.createElement("label");
     boxProcedencia.appendChild(txtKilometros);
@@ -101,7 +101,7 @@ inputBusqueda.addEventListener("keydown", function(event){
 
     let txtciudad = document.createElement("label");
     boxProcedencia.appendChild(txtciudad);
-    txtciudad.innerHTML = auto1.ciudad;
+    txtciudad.innerHTML = auto.ciudad;
 
     let boxLineaDiv = document.createElement("div");
     mainContent.appendChild(boxLineaDiv);
