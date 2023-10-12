@@ -1,22 +1,33 @@
 class Automovil{
-    constructor(marca,modelo,precio,anyo,ciudad,Kilometros){
+    constructor(marca,modelo,precio,anyo,ciudad,Kilometros,imagen){
         this.marca= marca;
         this.modelo=modelo;
         this.precio=precio;
         this.anyo=anyo;
         this.ciudad=ciudad;
         this.Kilometros=Kilometros;
+        this.imagen=imagen
     }
 }
 
-let auto1 = new Automovil("Toyota","Prado 2.8 Tx-l", 200000000, 2021, "pitalito - Huila", 35900);
+let auto1 = new Automovil("Toyota","Prado 2.8 Tx-l", 200000000, 2021, "pitalito - Huila", 35900,"img/Toyota Prado Tx-l 3.0.jpeg");
+let auto2 = new Automovil("ford","Prado 2.8 Tx-l", 300000000, 2021, "bruselas - Huila", 45900,"img/ford.jpg");
+let auto3 = new Automovil("bmw","Prado 2.8 Tx-l", 50000000, 2021, "neiva - Huila", 39900,"img/BMW 320i. 1100x765jepg.jpg");
+let auto4 = new Automovil("kia","Prado 2.8 Tx-l", 13000000, 2021, "isnos - Huila", 12200,"img/kia.jpg");
+let auto5 = new Automovil("mazda","Prado 2.8 Tx-l", 25600000, 2021, "pitalito - Huila", 21900,"img/mazda.jpg");
+
+var carrosArrays = [auto1, auto2, auto3, auto4, auto5  ]
 
 let inputBusqueda = document.getElementById("inputBusqueda");
 
-// inputBusqueda.addEventListener("load", function(event){
-window.addEventListener("load", function(){
+inputBusqueda.addEventListener("keydown", function(event){
+// window.addEventListener("load", function(event){
 
-    // if(event.key == "Enter"){
+    if(event.key == "Enter"){
+        carrosArrays.forEach(function(auto, indice){
+            console.log("Auto" + (indice + 1) + ":");
+            console.log(auto.marca);
+        
     let mainContent = document.getElementById("mainContent");
     let boxAuto = document.createElement("div");
     mainContent.appendChild(boxAuto);
@@ -44,7 +55,7 @@ window.addEventListener("load", function(){
     let imgAuto = document.createElement("img");
     boxImg.appendChild(imgAuto);
     boxImg.setAttribute("class", "box-img");
-    imgAuto.setAttribute("src", "img/Toyota Prado Tx-l 3.0.jpeg")
+    imgAuto.setAttribute("src",auto.imagen)
     imgAuto.setAttribute("class", "img-auto");
 
 
@@ -95,6 +106,6 @@ window.addEventListener("load", function(){
     let boxLineaDiv = document.createElement("div");
     mainContent.appendChild(boxLineaDiv);
     boxLineaDiv.setAttribute("class", "box-linea-div");
-    
-}); 
- 
+}
+)
+}}); 
