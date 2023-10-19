@@ -72,3 +72,12 @@ body{
     margin-right: 600px;
 }
 
+.img-container {
+    max-width: 50%; /* Establece el ancho máximo del contenedor */
+    margin-left: 60%; /* Centra el contenedor en la página */
+  }
+  
+  .img-container img {
+    max-width: 50%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    height: 10%; /* Mantiene la proporción de aspecto de la imagen */
+  }
