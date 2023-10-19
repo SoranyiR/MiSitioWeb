@@ -134,13 +134,13 @@ header .logo{
 }
 
 .text-content button{
-    color: var(--white);
-    background: var(--black);
+    color: white;
+    background: black;
     font-size: .9rem;
     font-weight: 700;
     padding: .8rem 1.6rem;
     margin: 1.5rem 0;
-    border: 1px solid var(--black);
+    border: 1px solid black;
     border-radius: 1rem;
     cursor: pointer;
     transition: .5s all linear;
@@ -149,4 +149,33 @@ header .logo{
 .text-content button:hover{
     color: var(--black);
     background: transparent;
+}
+
+nav .registration{
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+.registration button{
+    color: gray;
+    background: transparent;
+    font-size: .9rem;
+    font-weight: 700;
+    padding: .5rem 1rem;
+    margin: 0 .5rem;
+    border: .1rem solid gray;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+.registration button:hover{
+    color: black;
+    border: .1rem solid black;
+    transform: translateY(-1px);
+}
+.registration button:active{
+    transform: scale(1.2);
+}
+.registration button:first-child{
+    border: none;
 }
