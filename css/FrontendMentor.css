@@ -2,6 +2,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 
 }
 
@@ -74,18 +75,13 @@ body{
 }
 
 .img-container {
-    /* height: 40%; */
-    /* width: 90%;  */
-    /* margin-left: 0%;  */
     display: flex;
     justify-content: center;
     margin-top: 10%;
   }
   
-  .img-container img {
-    max-width: 200%; 
-    max-height: 50%; 
-    /* height: 2400%; */
+  .img-container img { 
+    max-height: 700px; 
   }
   .p{
     margin-right: 1%;
