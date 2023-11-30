@@ -1,18 +1,17 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 20px;
+    background-color: white;
+    margin: 25px;
+    
 }
 
 .container {
-
+    
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-div {
-    margin-bottom: 15px;
+    flex-direction: column;
 }
 
 label {
@@ -22,33 +21,31 @@ label {
 
 input {
     padding: 8px;
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
 }
 
 button {
-    background-color: #4caf50;
+    background-color: rgb(63, 74, 226);
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    margin: 15px;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: rgb(63, 74, 226);
 }
 
 #chartContainer {
-
     width: 50%;
     height: 350px;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     border-radius: 5px;
     margin: 0 auto;
     text-align: center;
-
-
 }
 
 
@@ -60,7 +57,10 @@ button:hover {
     max-width: 400px;
     transition: background-color 0.3s;
     margin: 0 auto;
-}
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}   
 
 .innerBar {
     height: 30px;
@@ -81,3 +81,4 @@ button:hover {
     align-items: center;
 
 }
+

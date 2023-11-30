@@ -16,11 +16,11 @@ function generarGrafica() {
     let barContainer = document.getElementById("chartContainer");
     barContainer.innerHTML = ""; 
     
-    crearBarra(" ", porcentajeDato1, { backgroundColor: "#FFCE56" });
-    crearBarra(" ", porcentajeDato2, { backgroundColor: "#FFCE56" });
-    crearBarra(" ", porcentajeDato3, { backgroundColor: "#FFCE56" });
-    crearBarra(" ", porcentajeDato4, { backgroundColor: "#FFCE56" });
-    crearBarra(" ", porcentajeDato5, { backgroundColor: "#FFCE56" });
+    crearBarra(" ", porcentajeDato1, { backgroundColor: "rgb(255,201,14" });
+    crearBarra(" ", porcentajeDato2, { backgroundColor: "rgb(255,201,14" });
+    crearBarra(" ", porcentajeDato3, { backgroundColor: "rgb(255,201,14" });
+    crearBarra(" ", porcentajeDato4, { backgroundColor: "rgb(255,201,14" });
+    crearBarra(" ", porcentajeDato5, { backgroundColor: "rgb(255,201,14" });
 }
 
 function crearBarra(label, porcentaje, estilos) {
