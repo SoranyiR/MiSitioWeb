@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+.container {
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#chartContainer {
+
+    width: 50%;
+    height: 350px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-align: center;
+
+
+}
+
+
+.bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    max-width: 400px;
+    transition: background-color 0.3s;
+    margin: 0 auto;
+}
+
+.innerBar {
+    height: 30px;
+    margin-right: 5px;
+}
+
+.label {
+    flex-grow: 1;
+}
+
+.percentage {
+    font-weight: bold;
+}
+
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
