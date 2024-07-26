@@ -215,7 +215,13 @@
         input:checked + .slider:before {
             transform: translateX(26px);
         }
+        .map {
+            width: 100%;
+            height: 400px;
+            margin: 2em 0;
+        }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 <body class="dark-mode">
     <header>
@@ -227,6 +233,7 @@
         <a href="#desventajas">Desventajas</a>
         <a href="#usos">Usos</a>
         <a href="#galeria">Galería</a>
+        <a href="#ubicacion">Ubicación</a>
     </nav>
     <div class="container">
         <div style="text-align: center; margin-bottom: 2em;">
@@ -283,6 +290,13 @@
             <p>Detrás del exquisito cacao de Yamboro, encontramos el arduo trabajo y dedicación de Juan Carlos Rodriguez Muñoz, un cacaotero apasionado por su labor. Juan Carlos ha dedicado gran parte de su vida al cultivo del cacao, asegurando la calidad y el sabor únicos que caracterizan a los productos de Yamboro. Su compromiso con la agricultura sostenible y el respeto por la tradición han hecho de sus granos de cacao un producto altamente apreciado tanto a nivel local como internacional.</p>
             <p><strong>Cacaotero:</strong> Juan Carlos Rodriguez Muñoz</p>
         </section>
+        <section id="ubicacion">
+            <h2 class="section-title">Ubicación de Yamboro</h2>
+            <div class="content">
+                <p>Yamboro se encuentra en Pitalito, Huila, específicamente en la vereda Aguadas, en el corregimiento de Chillurco. Esta región es conocida por su terreno fértil y clima ideal para el cultivo de cacao, lo que contribuye a la alta calidad del cacao producido aquí. La combinación de altitud, suelo y microclima único proporciona las condiciones perfectas para cultivar granos de cacao con un perfil de sabor rico y complejo.</p>
+                <div id="map" class="map"></div>
+            </div>
+        </section>
         <section>
             <button id="learn-more-button" class="button">Aprender Más</button>
             <div id="more-info">
@@ -302,6 +316,7 @@
     <footer>
         &copy; 2024 Todo sobre el Cacao de Yamboro. Todos los derechos reservados.
     </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const links = document.querySelectorAll("nav a");
@@ -331,7 +346,16 @@
                     document.body.classList.add("dark-mode");
                 }
             });
+
+            var map = L.map('map').setView([1.890538, -76.095710], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+            L.marker([1.890538, -76.095710]).addTo(map)
+                .bindPopup('Yamboro, Pitalito, Huila.<br>Vereda Aguadas.')
+                .openPopup();
         });
-    </script>
+    </script>    
 </body>
 </html>
