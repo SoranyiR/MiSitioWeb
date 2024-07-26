@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Maravilloso Mundo del Cacao de Yamboro</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .light-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 2.5em;
+            color: #ffcc00;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .light-mode header {
+            background-color: #f0f0f0;
+            color: #000000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2c2c2c;
+            padding: 0.5em 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .light-mode nav {
+            background-color: #dcdcdc;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .light-mode nav a {
+            color: #000000;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            color: #bb86fc;
+        }
+        .container {
+            padding: 2em;
+            text-align: center;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5em;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            text-align: center;
+        }
+        .grid img {
+            width: 100%;
+            border-radius: 0.5em;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #1f1f1f;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .light-mode footer {
+            background-color: #f0f0f0;
+            color: #000000;
+        }
+        .button {
+            background-color: #6200ea;
+            border: none;
+            color: white;
+            padding: 1em 2em;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            margin: 1em 0.5em;
+            cursor: pointer;
+            border-radius: 0.5em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #3700b3;
+            transform: translateY(-2px);
+        }
+        section {
+            margin-bottom: 2em;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #bb86fc;
+            margin-bottom: 0.5em;
+        }
+        .light-mode h2 {
+            color: #6200ea;
+        }
+        p {
+            line-height: 1.8;
+            margin-bottom: 1em;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            line-height: 1.8;
+        }
+        ul li::before {
+            content: "•";
+            color: #bb86fc;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .light-mode ul li::before {
+            color: #6200ea;
+        }
+        #more-info {
+            display: none;
+            margin-top: 1em;
+            background-image: url('img/Cocoa-bean-fruit.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 1em;
+            border-radius: 0.5em;
+            max-width: 800px;
+            margin: 1em auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        #more-info::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 0.5em;
+            z-index: -1;
+        }
+        .light-mode #more-info {
+            color: #000000;
+        }
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #6200ea;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <header>
+        <h1>El Maravilloso Mundo del Cacao de Yamboro</h1>
+    </header>
+    <nav>
+        <a href="#historia">Historia</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#desventajas">Desventajas</a>
+        <a href="#usos">Usos</a>
+        <a href="#galeria">Galería</a>
+    </nav>
+    <div class="container">
+        <div style="text-align: center; margin-bottom: 2em;">
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <section id="historia">
+            <h2>Historia del Cacao</h2>
+            <p>El cacao tiene una rica historia que se remonta a las antiguas civilizaciones mesoamericanas. Se dice que los mayas y aztecas consideraban al cacao como un regalo de los dioses y lo utilizaban en ceremonias religiosas y como moneda. El cacao se cultivaba y se consumía en forma de una bebida amarga llamada "xocoatl", que a menudo se mezclaba con especias y chiles. Cuando los europeos llegaron a América, el cacao fue llevado a Europa, donde se convirtió en un producto muy valorado y se empezó a mezclar con azúcar y leche para crear el chocolate.</p>
+            <img src="img/Cocoa-bean-fruit.jpg" alt="Cacao Image" class="image">
+        </section>
+        <section id="beneficios">
+            <h2>Beneficios del Cacao</h2>
+            <p>El cacao es conocido por sus numerosos beneficios para la salud. Algunos de los más destacados son:</p>
+            <ul>
+                <li>Rico en antioxidantes: El cacao contiene flavonoides, que son poderosos antioxidantes que ayudan a reducir la inflamación y a mejorar la salud cardiovascular.</li>
+                <li>Mejora el estado de ánimo: El consumo de cacao puede aumentar los niveles de serotonina y endorfinas en el cerebro, lo que puede ayudar a mejorar el estado de ánimo y reducir el estrés.</li>
+                <li>Bueno para el corazón: El cacao puede ayudar a mejorar la circulación sanguínea y a reducir la presión arterial.</li>
+                <li>Fuente de minerales: El cacao es una excelente fuente de magnesio, hierro, potasio y zinc, que son esenciales para diversas funciones corporales.</li>
+            </ul>
+        </section>
+        <section id="desventajas">
+            <h2>Desventajas del Cacao</h2>
+            <p>A pesar de sus numerosos beneficios, el cacao también tiene algunas desventajas que deben tenerse en cuenta:</p>
+            <ul>
+                <li>Contenido calórico: El cacao y sus derivados, como el chocolate, pueden ser altos en calorías, lo que puede contribuir al aumento de peso si se consumen en exceso.</li>
+                <li>Azúcar añadido: Muchos productos de cacao y chocolate contienen altos niveles de azúcar añadido, lo que puede ser perjudicial para la salud dental y contribuir a problemas de salud como la diabetes.</li>
+                <li>Alergias: Algunas personas pueden ser alérgicas al cacao o a los ingredientes que se utilizan en los productos de chocolate.</li>
+            </ul>
+        </section>
+        <section id="usos">
+            <h2>Usos del Cacao</h2>
+            <p>El cacao tiene una amplia variedad de usos, tanto en la cocina como en la industria cosmética. Algunos de los usos más comunes del cacao incluyen:</p>
+            <ul>
+                <li>Chocolate: El uso más común del cacao es en la fabricación de chocolate, que puede variar desde chocolate negro con alto contenido de cacao hasta chocolate con leche y chocolate blanco.</li>
+                <li>Bebidas: El cacao se utiliza para hacer bebidas calientes como el chocolate caliente y el cacao caliente, así como en batidos y smoothies.</li>
+                <li>Repostería: El cacao en polvo se utiliza en una variedad de productos de repostería, incluyendo pasteles, galletas, brownies y trufas.</li>
+                <li>Cosmética: El cacao también se utiliza en la industria cosmética para fabricar productos como manteca de cacao, cremas hidratantes y exfoliantes.</li>
+            </ul>
+        </section>
+        <section id="galeria">
+            <h2>Galería de Imágenes</h2>
+            <div class="grid">
+                <img src="img/cocoa-be.jpg" alt="Cacao 1">
+                <img src="img/cacao.jpg" alt="Cacao 2">
+                <img src="img/ad0fd258ad_50157031_qualite-cacao.jpg" alt="Cacao 3">
+                <img src="img/cocoa-be.jpg" alt="Cacao 4">
+            </div>
+        </section>
+        <section id="cacaotero">
+            <h2>El Cacaotero de Yamboro</h2>
+            <p>Detrás del exquisito cacao de Yamboro, encontramos el arduo trabajo y dedicación de Juan Carlos Rodriguez Muñoz, un cacaotero apasionado por su labor. Juan Carlos ha dedicado gran parte de su vida al cultivo del cacao, asegurando la calidad y el sabor únicos que caracterizan a los productos de Yamboro. Su compromiso con la agricultura sostenible y el respeto por la tradición han hecho de sus granos de cacao un producto altamente apreciado tanto a nivel local como internacional.</p>
+            <p><strong>Cacaotero:</strong> Juan Carlos Rodriguez Muñoz</p>
+        </section>
+        <section>
+            <button id="learn-more-button" class="button">Aprender Más</button>
+            <div id="more-info">
+                <h2>Información Adicional sobre el Cacao</h2>
+                <p>El cacao, además de ser el ingrediente principal del chocolate, tiene una gran cantidad de usos y beneficios para la salud. Algunos datos adicionales incluyen:</p>
+                <ul>
+                    <li>El cacao crudo es uno de los alimentos más ricos en antioxidantes que existen, lo que ayuda a combatir los radicales libres en el cuerpo y reducir el envejecimiento celular.</li>
+                    <li>Los flavonoides del cacao pueden ayudar a mejorar la función cerebral, aumentar la memoria y la concentración, y reducir el riesgo de enfermedades neurodegenerativas como el Alzheimer.</li>
+                    <li>El cacao es una fuente natural de teobromina, un estimulante suave que puede mejorar el estado de ánimo y proporcionar un aumento de energía sin los efectos negativos del café.</li>
+                    <li>El consumo de cacao puede mejorar la salud cardiovascular al aumentar la elasticidad de los vasos sanguíneos y reducir el riesgo de coágulos sanguíneos.</li>
+                    <li>En la industria cosmética, el cacao se utiliza para hacer cremas y lociones que hidratan y nutren la piel, gracias a su alto contenido en grasas saludables.</li>
+                    <li>El cacao también tiene propiedades antiinflamatorias y puede ser beneficioso para quienes padecen enfermedades inflamatorias crónicas.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 Todo sobre el Cacao de Yamboro. Todos los derechos reservados.
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll("nav a");
+            links.forEach(link => {
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    targetElement.scrollIntoView({ behavior: "smooth" });
+                });
+            });
+
+            const learnMoreButton = document.getElementById("learn-more-button");
+            const moreInfo = document.getElementById("more-info");
+            learnMoreButton.addEventListener("click", function() {
+                moreInfo.style.display = moreInfo.style.display === "none" ? "block" : "none";
+                learnMoreButton.textContent = moreInfo.style.display === "none" ? "Aprender Más" : "Mostrar Menos";
+            });
+
+            const themeToggle = document.getElementById("theme-toggle");
+            themeToggle.addEventListener("change", function() {
+                if (this.checked) {
+                    document.body.classList.remove("dark-mode");
+                    document.body.classList.add("light-mode");
+                } else {
+                    document.body.classList.remove("light-mode");
+                    document.body.classList.add("dark-mode");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
