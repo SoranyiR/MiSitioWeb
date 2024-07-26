@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Mundo del Café de Yamboro</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1f1f1f;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5em 1em;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        .section-title {
+            font-size: 2.5em;
+            color: #ffcc00;
+            border-bottom: 3px solid #d9b08c;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+        .content {
+            margin-bottom: 2em;
+        }
+        .content p {
+            margin-bottom: 1em;
+            text-align: justify;
+        }
+        .content ul {
+            list-style: square;
+            padding-left: 20px;
+        }
+        .content ul li {
+            margin-bottom: 0.5em;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1em auto;
+            border-radius: 8px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1em;
+        }
+        .grid img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .highlight {
+            background-color: #d9b08c;
+            padding: 1em;
+            border-radius: 8px;
+            margin-top: 1em;
+            color: #000; /* Letra en negro */
+        }
+        footer {
+            background-color: #1f1f1f;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .map {
+            width: 100%;
+            height: 400px;
+            margin: 2em 0;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                width: 100%;
+            }
+            .menu a {
+                padding: 1em;
+                border-bottom: 1px solid #555;
+                width: 100%;
+                text-align: center;
+            }
+            .menu-icon {
+                display: block;
+            }
+            .menu.show {
+                display: flex;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>El Mundo del Café de Yamboro</h1>
+    </header>
+    <nav>
+        <span class="menu-icon" id="menu-icon">&#9776;</span>
+        <div class="menu" id="menu">
+            <a href="#historia">Historia</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#desventajas">Desventajas</a>
+            <a href="#usos">Usos</a>
+            <a href="#galeria">Galería</a>
+            <a href="#caficultores">Caficultores</a>
+            <a href="#ubicacion">Ubicación</a>
+        </div>
+    </nav>
+    <div class="container">
+        <section id="historia">
+            <h2 class="section-title">Historia del Café</h2>
+            <div class="content">
+                <p>El café, una de las bebidas más consumidas a nivel mundial, tiene una historia que se remonta a varios siglos. Se cree que fue descubierto en Etiopía, donde las leyendas cuentan que un pastor llamado Kaldi notó el comportamiento energético de sus cabras después de consumir los frutos del cafeto. A partir de allí, el café se difundió a través de la península arábiga, alcanzando Europa y las Américas, y se convirtió en un producto de gran importancia económica y cultural.</p>
+                <img src="img/caficultores-2.jpg" alt="Historia del café" class="image">
+            </div>
+        </section>
+        <section id="beneficios">
+            <h2 class="section-title">Beneficios del Café</h2>
+            <div class="content">
+                <p>El consumo moderado de café puede aportar numerosos beneficios para la salud. Algunos de los más notables incluyen:</p>
+                <ul>
+                    <li>Rico en antioxidantes que ayudan a combatir los radicales libres.</li>
+                    <li>Puede mejorar la función cerebral, incluyendo la memoria, el estado de ánimo y la vigilancia.</li>
+                    <li>Incrementa el rendimiento físico al aumentar los niveles de adrenalina.</li>
+                    <li>Reduce el riesgo de enfermedades como Parkinson y Alzheimer.</li>
+                    <li>Puede proteger el hígado, ayudando a prevenir afecciones como la cirrosis.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="desventajas">
+            <h2 class="section-title">Desventajas del Café</h2>
+            <div class="content">
+                <p>Como cualquier otra sustancia, el café debe consumirse con moderación para evitar efectos negativos. Algunas desventajas incluyen:</p>
+                <ul>
+                    <li>Insomnio y trastornos del sueño si se consume en exceso o demasiado tarde en el día.</li>
+                    <li>Pueden aparecer síntomas de abstinencia como dolores de cabeza, fatiga e irritabilidad.</li>
+                    <li>Problemas digestivos, como acidez estomacal o malestar gastrointestinal.</li>
+                    <li>Riesgo de aumento de la presión arterial, especialmente en individuos sensibles a la cafeína.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="usos">
+            <h2 class="section-title">Usos del Café</h2>
+            <div class="content">
+                <p>El café es increíblemente versátil y tiene una variedad de usos, que van más allá de ser una simple bebida energizante:</p>
+                <ul>
+                    <li>En la cocina, es un ingrediente estrella en postres como el tiramisú, helados, y pasteles de café.</li>
+                    <li>En la cosmética, se usa en exfoliantes y mascarillas debido a sus propiedades antioxidantes y antiinflamatorias.</li>
+                    <li>Los posos de café son un excelente fertilizante natural para plantas, ricos en nutrientes esenciales.</li>
+                    <li>El extracto de café se utiliza en suplementos dietéticos por su capacidad para ayudar en la pérdida de peso y mejorar el rendimiento físico.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="galeria">
+            <h2 class="section-title">Galería de Imágenes</h2>
+            <div class="grid">
+                <img src="img/plantacion_cafe.jpg" alt="Plantación de café">
+                <img src="img/arte_cafe.jpg" alt="Arte en taza de café">
+                <img src="img/grano_cafe.jpg" alt="Granos de café">
+                <img src="img/barista_cafe.jpg" alt="Barista sirviendo café">
+                <img src="img/caficultores-min.jpg" alt="Barista sirviendo café">
+                <img src="img/Paisaje-Cafetero (1).jpg" alt="Barista sirviendo café">
+            </div>
+        </section>
+        <section id="caficultores">
+            <h2 class="section-title">Nuestros Caficultores</h2>
+            <div class="content highlight">
+                <p>En Yamboro, el cultivo del café es una pasión compartida por nuestros caficultores, Henrri Ibata y Edgar Rodriguez. Estos dos expertos han dedicado su vida al perfeccionamiento de la producción de café, aplicando técnicas agrícolas sostenibles y métodos tradicionales que garantizan un producto de alta calidad. Su compromiso con la excelencia ha colocado a Yamboro en el mapa como un productor destacado de café premium.</p>
+                <p>Los cafetales de Yamboro se encuentran en una ubicación privilegiada en la vereda Aguadas, en el corregimiento de Chillurco, Pitalito, Huila, una región conocida por su altitud y clima ideales para el cultivo de café. Aquí, Henrri y Edgar supervisan cada etapa del proceso de cultivo, asegurando que cada grano de café refleje la riqueza y diversidad del terreno de Yamboro.</p>
+            </div>
+        </section>
+        <section id="ubicacion">
+            <h2 class="section-title">Ubicación de Yamboro</h2>
+            <div class="content">
+                <p>Yamboro se encuentra en Pitalito, Huila, específicamente en la vereda Aguadas, en el corregimiento de Chillurco. Esta región es conocida por su terreno fértil y clima ideal para el cultivo de café, lo que contribuye a la alta calidad del café producido aquí. La combinación de altitud, suelo y microclima único proporciona las condiciones perfectas para cultivar granos de café con un perfil de sabor rico y complejo.</p>
+                <div id="map" class="map"></div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        &copy; 2024 El Mundo del Café de Yamboro. Todos los derechos reservados.
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuIcon = document.getElementById("menu-icon");
+            const menu = document.getElementById("menu");
+
+            menuIcon.addEventListener("click", function() {
+                menu.classList.toggle("show");
+            });
+
+            var map = L.map('map').setView([1.887677, -76.100702], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+            L.marker([1.887677, -76.100702]).addTo(map)
+                .bindPopup('Yamboro, Pitalito, Huila.<br>Vereda Aguadas.')
+                .openPopup();
+        });
+    </script>
+</body>
+</html>
